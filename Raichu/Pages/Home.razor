@@ -1,0 +1,102 @@
+﻿@page "/"
+<FluentDesignTheme @bind-Mode="@Mode"
+                   OfficeColor="@OfficeColor"
+                   OfficeColorChanged="OfficeColorChanged"
+                   StorageName="theme" />
+<FluentGrid>
+    <FluentGridItem>
+        <FluentTextField Label="URL" Placeholder="https://www.example.com"></FluentTextField>
+    </FluentGridItem>
+    <FluentGridItem>
+        <FluentTextField Label="Name"></FluentTextField>
+    </FluentGridItem>
+    <FluentGridItem>
+        <FluentTextField Label="Address"></FluentTextField>
+    </FluentGridItem>
+    <FluentGridItem>
+        <FluentTextField Label="Phone"></FluentTextField>
+    </FluentGridItem>
+    <FluentGridItem>
+        <FluentSelect Label="Theme"
+                        Items="@(Enum.GetValues<DesignThemeModes>())"
+                      @bind-SelectedOption="@Mode" />
+    </FluentGridItem>
+    <FluentGridItem>
+        <FluentSelect Label="Color"
+                        Items="@(Enum.GetValues<OfficeColor>())"
+                        Height="200px"
+                      @bind-SelectedOption="@OfficeColor">
+            <OptionTemplate>  
+                <FluentStack>
+                    <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                Color="Color.Custom"
+                                CustomColor="@context.ToAttributeValue()" />
+                    <FluentLabel>@context</FluentLabel>  
+                </FluentStack>
+            </OptionTemplate> 
+        </FluentSelect>
+    </FluentGridItem>
+        <FluentGridItem>
+            <FluentSelect Label="Color"
+                          Items="@(Enum.GetValues<OfficeColor>())"
+                          Height="200px"
+                          @bind-SelectedOption="@OfficeColor">
+                <OptionTemplate>
+                    <FluentStack>
+                        <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                    Color="Color.Custom"
+                                    CustomColor="@context.ToAttributeValue()" />
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
+        </FluentGridItem>
+        <FluentGridItem>
+            <FluentSelect Label="Color"
+                          Items="@(Enum.GetValues<OfficeColor>())"
+                          Height="200px"
+                          @bind-SelectedOption="@OfficeColor">
+                <OptionTemplate>
+                    <FluentStack>
+                        <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                    Color="Color.Custom"
+                                    CustomColor="@context.ToAttributeValue()" />
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
+        </FluentGridItem>
+        <FluentGridItem>
+            <FluentSelect Label="Color"
+                          Items="@(Enum.GetValues<OfficeColor>())"
+                          Height="200px"
+                          @bind-SelectedOption="@OfficeColor">
+                <OptionTemplate>
+                    <FluentStack>
+                        <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                    Color="Color.Custom"
+                                    CustomColor="@context.ToAttributeValue()" />
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
+        </FluentGridItem>
+        <FluentGridItem>
+            <FluentSelect Label="Color"
+                          Items="@(Enum.GetValues<OfficeColor>())"
+                          Height="200px"
+                          @bind-SelectedOption="@OfficeColor">
+                <OptionTemplate>
+                    <FluentStack>
+                        <FluentIcon Value="@(new Icons.Filled.Size20.RectangleLandscape())"
+                                    Color="Color.Custom"
+                                    CustomColor="@context.ToAttributeValue()" />
+                        <FluentLabel>@context</FluentLabel>
+                    </FluentStack>
+                </OptionTemplate>
+            </FluentSelect>
+        </FluentGridItem>
+</FluentGrid>        
+@code{
+    
+}

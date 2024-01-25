@@ -1,0 +1,11 @@
+﻿@page "/counter"
+
+<h1>Couter</h1>
+<Virtualize Items="@numberList" Context="number">
+    <FluentCard>
+        <h1>@number</h1>
+    </FluentCard>
+</Virtualize>
+@code {
+    List<int> numberList = Enumerable.Range(0, 10000).ToList();
+}
